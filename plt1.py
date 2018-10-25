@@ -1,20 +1,20 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(-1,1,100)
+x = np.linspace(-3,3,100)
 y1 = 2*x
 y2 = x**2
 
 plt.figure(figsize=(8,5))
 #set ticks
-plt.xlim((-1,2))
-plt.ylim((1,3))
+plt.xlim((-3,3))
+plt.ylim((0,9))
 plt.xlabel('x')
 plt.ylabel('y')
-new_ticks = np.linspace(-1,2,5)
+new_ticks = np.linspace(-3,3,11)
 plt.xticks(new_ticks)
-plt.yticks([-2,-1.8,-1,1.22,3],
-	[r'$blue$',r'$pink$',r'$medium$',r'$medium well$',r'$well done$'])
+plt.yticks([1,3,5,7,9],
+	[r'$blue$',r'$pink$',r'$medium$',r'$medium\ well$',r'$well done$'])
 
 #gca = 'get current axis'
 ax = plt.gca()
@@ -49,8 +49,8 @@ plt.annotate(r'$x^2=%d$' % y0,
 	fontsize=16,
 	arrowprops=dict(arrowstyle='->',connectionstyle='arc3,rad=.2')
 	)
-
-plt.text(0,3,
+#title
+plt.text(0,9,
 	r'$Kinds\ of\ steak.\alpha\ \mu\ \sigma$',
 	fontdict={'size':16,'color':'r'})
 
