@@ -6,16 +6,19 @@ z = Symbol('z')
 
 e = (x**2-1)/(x-1)
 
-print(e.factor())
-print(e.expand())
-print(e.simplify())
+pprint(e.factor())
+pprint(e.expand())
+pprint(e.simplify())
 
 f = sin(x)/cos(x)
-print(y.trigsimp())
+pprint(y.trigsimp())
 
 a = Symbol('a')
 b = Symbol('b')
 g = x**a*x**b
-print(g.powsimp())
+pprint(g.powsimp())
 
-print(solve([y+x/4,x-13-4*z,4*x-y+z-1],[x,y,z]))
+pprint(solve([y+x/4,x-13-4*z,4*x-y+z-1],[x,y,z]))
+
+h = 2*x**2*(x-(sin(x))**2*cos(x**2)*E**sin(x))
+pprint(series(h))
