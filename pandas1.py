@@ -24,3 +24,10 @@ print(file.tail(2))#foot 2
 print(file.describe())#etc.
 print(file["星座"][1:6])#special column
 print(file[file["结束月日"]>601])#bool index
+
+print(file.sort_values(by = '开始月日',
+	ascending = False))#sort
+file1 = file.dropna()#delete Samples including missing value
+print(file1)
+file2 = file.fillna('?')#fill missing value
+print(file2)
