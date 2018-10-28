@@ -1,3 +1,3 @@
 # matplot_learning
 
-Including matplotlib, sympy and numpy.
+Including matplotlib, sympy, numpy and pandas.
